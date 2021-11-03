@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!-- Created By CodingLab - www.codinglabweb.com -->
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+   <!----<title>Login Form Design | CodeLab</title>---->
+    <link href="{{ url_for('static', filename='login_style02.css') }}" rel="stylesheet">
+    <title>노른자|로그인메인로그인</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="title"><img src="img/logo_02.gif" id="logo">로그인</div>
+      <form action="#">
+        <div style="display: flex;">
+          <div class="content">
+              <div class="checkbox">
+                <input type="checkbox" id="remember-me">
+                <label for="remember-me">대상자</label>
+              </div>
+            </div>
+            <div class="content">
+              <div class="checkbox">
+                <input type="checkbox" id="remember-me">
+                <label for="remember-me">보호자</label>
+              </div>
+            </div>
+        </div>
+        <div class="field">
+          
+          <input type="text" required>
+          <label>아이디@주소</label>
+        </div>
+        <div class="field">
+          <input type="password" required>
+          <label>비밀번호</label>
+        </div>
+        <div class="content">
+          <div class="checkbox">
+            <input type="checkbox" id="remember-me">
+            <label for="remember-me">아이디 비밀번호 저장</label>
+          </div>
+          <div class="pass-link"><a href="#">잊으셨나요?</a></div>
+        </div>
+        <div class="field">
+          <input type="submit" value="로그인하기">
+        </div>
+        <div class="signup-link">회원가입안하셨어요? <a href="#">가입하기!</a></div>
+      </form>
+      <br>
+        <div id="sizing">
+            <a href='#' class='btn-floating'><div><span style="font-size: 12;">가</span>+</div></a> 
+            <br><br>
+            <a href='#' class='btn-floating'><div><span style="font-size: 5;">가</span>-</div></a>
+        </div>
+    </div>
+  </body>
+</html>
