@@ -3,13 +3,21 @@
 <html lang="ko" dir="ltr">
   <head>
     <meta charset="utf-8">
-   <!----<title>Login Form Design | CodeLab</title>---->
-    <link href="{{ url_for('static', filename='login_style02.css') }}" rel="stylesheet">
+   <!-- CSS -->
+   <link rel="stylesheet" type="text/css" href="../static/login_style02.css">
+   <link rel="stylesheet" type="text/css" href="login_style02.css">
+   <link href="{{ url_for('static', filename='login_style02.css') }}" rel="stylesheet">
+
+    <!-- JS -->
+     <link rel="stylesheet" type="text/javascript" href="../static/login_style02.js">
+     <link rel="stylesheet" type="text/javascript" href="login_style02.js">
+     <link href="{{ url_for('static', filename='login_style02.js') }}" rel="stylesheet">
+
     <title>노른자|로그인메인로그인</title>
   </head>
   <body>
     <div class="wrapper">
-      <div class="title"><img src="img/logo_02.gif" id="logo">로그인</div>
+      <div class="title"><img src="../static/img/logo_02.gif" id="logo">로그인</div>
       <form action="#">
         <div style="display: flex;">
           <div class="content">
@@ -27,7 +35,7 @@
         </div>
         <div class="field">
           
-          <input type="text" required>
+          <input type="text" required id="input-username">
           <label>아이디@주소</label>
         </div>
         <div class="field">

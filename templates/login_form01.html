@@ -3,20 +3,36 @@
 <html lang="ko" dir="ltr">
   <head>
     <meta charset="utf-8">
-   <!----<title>Login Form Design | CodeLab</title>---->
-    <link rel="stylesheet" href="login_style01.css">
-    <title>노른자|로그인</title>
+    <!----<title>Login Form Design | CodeLab</title>---->
+    <link rel="stylesheet" href="../static/login_style01.css">
+    <!-- <link rel="stylesheet" type="text/css" href="login_style01.css">
+    <link href="{{ url_for('static', filename='login_style01.css') }}" rel="stylesheet"> -->
+    <!-- JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js" type="text/javascript"></script>
+
+    <script>
+
+      function reload(){
+        alert('이동합니다.');
+      }
+
+      const goToLogin = () => {
+        window.location.href='/login/general'
+      }
+    </script>
+    <title>노른자|로그인1</title>
   </head>
   <body>
     <div class="wrapper">
-      <div class="title"><img src="img/logo_01.png" id="logo">로그인</div>
-      <form action="#">
+      <div class="title"><img src="../static/img/logo_01.png" id="logo">로그인</div>
+      <form>
           <div class="field">
-          <input type="submit" value="ID/PW로 로그인하기">
+          <input type="submit" value="ID/PW로 로그인하기" for="dd">
         </div>
         
         <div class="field">
-            <img src="img/kakao.png" id="kakao_logo">
+            <img src="../static/img/kakao.png" id="kakao_logo">
           <input type="submit" value="카카오톡으로 로그인하기" id="kakao_login">
         </div>
         <div class="signup-link">회원가입안하셨어요? <a href="#">가입하기!</a></div>
@@ -27,6 +43,9 @@
             <br><br>
             <a href='#' class='btn-floating'><div><span style="font-size: 5;">가</span>-</div></a>
         </div>
+    </div>
+    <div>
+      <button id="dd" onclick="goToLogin()">dd</button>
     </div>
   </body>
 </html>

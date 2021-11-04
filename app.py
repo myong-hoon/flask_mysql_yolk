@@ -28,6 +28,7 @@ def home():
         sql = "SELECT * FROM users where username = '%s';"
         cursor.execute(sql%(payload["id"]))
         result = cursor.fetchone()
+        print(result)
 
         return render_template('index.html', user_info=result)
 
@@ -36,11 +37,14 @@ def home():
     except jwt.exceptions.DecodeError:
         return redirect(url_for("login", msg="로그인 정보가 존재하지 않습니다."))
 
-
 @app.route('/login')
 def login():
-    msg = request.args.get("msg")
-    return render_template('login.html', msg=msg)
+    return render_template('login_form01.html')
+
+
+@app.route('/login/general')
+def login2():
+    return render_template('login_form02.html')
 
 
 @app.route('/user/<username>')
@@ -133,6 +137,11 @@ def save_img():
         return jsonify({"result": "success", 'msg': '프로필을 업데이트했습니다.'})
     except (jwt.ExpiredSignatureError, jwt.exceptions.DecodeError):
         return redirect(url_for("home"))
+
+
+@app.route('/move', methods=['GET'])
+def move():
+    return redirect(url_for('/login/general'))
 
 
 if __name__ == '__main__':

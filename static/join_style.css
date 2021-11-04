@@ -11,14 +11,13 @@ html,body{
   width: 100%;
   place-items: center;
   background: #f2f2f2;
-  /* background: linear-gradient(-135deg, #c850c0, #4158d0); */
 }
 ::selection{
   background: #c9b027;
   color: #fff;
 }
 .wrapper{
-  width: 380px;
+  width: 500px;
   background: #fff;
   border-radius: 15px;
   box-shadow: 0px 15px 20px rgba(0,0,0,0.1);
@@ -35,7 +34,7 @@ html,body{
 }
 #logo{
     width: 100px;
-    margin: 10px 20px -30px -50px;
+    /* margin: 10px 20px -30px -50px; */
 
 }
 .wrapper form{
@@ -49,13 +48,23 @@ html,body{
 }
 .wrapper form .field input{
   height: 100%;
-  width: 100%;
+  width: 70%;
   outline: none;
   font-size: 17px;
   padding-left: 20px;
   border: 1px solid lightgrey;
   /* border-radius: 25px; */
   transition: all 0.3s ease;
+}
+#search_btn{
+    width: 70px;
+    border: none;
+    background-color: burlywood;
+    color:#262626;
+    font-size: 8px;
+    font-weight: 100px;
+    margin: auto auto 20px;
+    border-radius: 30px;
 }
 .wrapper form .field input:focus,
 form .field input:valid{
@@ -106,32 +115,27 @@ form .content label{
 form .content .pass-link{
   color: "";
 }
+.em{
+  display: flex;
+}
+.form-control{
+  width: 110px;
+  height: 50px;
+  margin: 25px 15px 0 0;
+  border-radius: none;
+}
+
 form .field input[type="submit"]{
-  color: #000000;
-  border: solid 2px red;
-  padding-left: 0;
-  margin-top: -10px;
-  font-size: 20px;
-  font-weight: 500;
-  cursor: pointer;
-  background-color: white;
-  transition: all 0.3s ease;
-}
-#kakao_logo{
-  left: 15px;
-  width: 30px;
-  position: absolute;
-}
-#kakao_login{
-  background-color: #fbe300;
-  color: #3b1e1e;
+  color: #fff;
   border: none;
   padding-left: 0;
-  margin-top: -10px;
+  margin: 0 -20px  0 60px;
   font-size: 20px;
   font-weight: 500;
   cursor: pointer;
+  background: linear-gradient(-135deg,#dfdb15, #eecb6c);
   transition: all 0.3s ease;
+  position: none;
 }
 form .field input[type="submit"]:active{
   transform: scale(0.95);
@@ -146,15 +150,15 @@ form .signup-link a{
   color: #4158d0;
   text-decoration: none;
 }
+
 form .pass-link a:hover,
 form .signup-link a:hover{
   text-decoration: underline;
 }
-   /* //floating btn Aria//// */
 #sizing{
     position: absolute;
-    bottom: 100px;
-    right: 10px;
+    bottom: 10px;
+    right: 5px;
 }
 .btn-floating {
     color: #fff;
@@ -179,3 +183,5 @@ form .signup-link a:hover{
     padding: 0;
     margin: .22em 0 0 0;
 }
+/* /////////////////////////////////////// */
+
